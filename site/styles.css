@@ -126,10 +126,6 @@ button { color: inherit; }
 .hashtag-card:hover, .hashtag-card:focus-visible { z-index: 1; transform: translateY(-4px) rotate(0); box-shadow: 0 5px 8px rgba(23,56,59,.08), 0 14px 22px rgba(23,56,59,.13); }
 .hashtag-card:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .tag-symbol { color: rgba(23,56,59,.52); font-family: "DM Sans", sans-serif; font-size: 19px; font-weight: 900; }
-.campaign-tag { display: flex; min-height: 61px; align-items: center; gap: 16px; margin-top: 14px; padding: 12px 17px; border: 1px solid var(--line); border-radius: 15px; background: var(--white); }
-.campaign-label { flex: 0 0 auto; padding: 6px 9px; border-radius: 6px; color: #fff; background: var(--orange); font-size: 10px; font-weight: 800; }
-.campaign-tag a { font-size: 13px; font-weight: 800; text-decoration: none; }
-.campaign-tag a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .inside-joke-note { display: flex; align-items: center; gap: 12px; margin-top: 24px; padding: 16px 18px; border: 1px solid #e5b76f; border-radius: 15px; background: #fff2d8; }
 .note-icon { display: grid; width: 27px; height: 27px; flex: 0 0 auto; place-items: center; border-radius: 50%; color: #fff; background: #bd6c27; font-family: Georgia, serif; font-weight: 800; }
 .inside-joke-note strong { font-size: 11px; }
@@ -218,8 +214,6 @@ button { color: inherit; }
   .hashtag-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
   .hashtag-card { min-height: 68px; gap: 7px; padding: 10px; font-size: 10px; }
   .tag-symbol { font-size: 16px; }
-  .campaign-tag { align-items: flex-start; flex-direction: column; gap: 9px; }
-  .campaign-tag a { font-size: 11px; }
   .inside-joke-note { align-items: flex-start; flex-wrap: wrap; padding: 13px; }
   .inside-joke-note > div { flex: 1; }
   .inside-joke-note > a { margin-left: 39px; }
