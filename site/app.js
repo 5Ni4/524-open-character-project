@@ -9,12 +9,25 @@ const form = document.querySelector("#submission-form");
 const formStatus = document.querySelector("#form-status");
 const submitButton = document.querySelector("#submit-button");
 
+const CODE_ADDED_WORKS = [
+  {
+    title: "X投稿",
+    post_url: "https://x.com/mae616_/status/2106361379490074906",
+    creator_name: "@mae616_",
+    creator_url: "https://x.com/mae616_",
+    category: "その他",
+    comment: "",
+  },
+];
+
 const state = {
-  items: [],
+  items: [...CODE_ADDED_WORKS],
   category: CATEGORY_ALL,
   query: "",
   offset: 0,
-  totalCount: 0,
+  totalCount: CODE_ADDED_WORKS.length,
+  cmsTotalCount: 0,
+  cmsDuplicateCount: 0,
   loading: false,
   configured: false,
   turnstileToken: "",
@@ -32,6 +45,8 @@ function safeXPostUrl(value) {
     return "";
   }
 }
+
+const CODE_ADDED_NORMALIZED_POST_URLS = new Set(CODE_ADDED_WORKS.map((item) => safeXPostUrl(item.post_url)));
 
 function safeXProfileUrl(value) {
   if (!value) return "";
@@ -155,14 +170,15 @@ function renderWorks() {
   grid.setAttribute("aria-busy", "false");
 
   const total = state.totalCount;
-  countNode.textContent = state.configured
+  const hasWorkSource = state.configured || CODE_ADDED_WORKS.length > 0;
+  countNode.textContent = hasWorkSource
     ? (state.query || state.category !== CATEGORY_ALL ? `${cards.length}件を表示` : `${total.toLocaleString("ja-JP")}件`)
     : "準備中";
   if (cards.length === 0) {
     const noPublishedWorks = state.configured && state.items.length === 0 && state.offset === 0;
     statusNode.replaceChildren(emptyState(
-      !state.configured ? "作品一覧を準備しています" : noPublishedWorks ? "掲載作品を募集中です" : "作品が見つかりませんでした",
-      !state.configured
+      !hasWorkSource ? "作品一覧を準備しています" : noPublishedWorks ? "掲載作品を募集中です" : "作品が見つかりませんでした",
+      !hasWorkSource
         ? "microCMSとの接続が整うと、公開された作品がここに並びます。"
         : noPublishedWorks
           ? "まだ作品はありません。お気に入りの524創作を、作者本人から送ってください。"
@@ -175,7 +191,7 @@ function renderWorks() {
       ? `${cards.length}件を表示しています。`
       : "";
   }
-  loadMoreButton.hidden = state.offset >= state.totalCount || !state.configured;
+  loadMoreButton.hidden = state.offset >= state.cmsTotalCount || !state.configured;
   loadMoreButton.disabled = state.loading;
   loadMoreButton.textContent = state.loading ? "読み込み中…" : "もっと見る ↓";
   if (cards.length) loadXEmbeds();
@@ -207,15 +223,27 @@ async function fetchPage(offset = 0) {
     if (!response.ok) throw new Error("読み込みに失敗しました。");
     const data = await response.json();
     state.configured = Boolean(data.configured);
-    state.items = offset === 0 ? (data.contents || []) : state.items.concat(data.contents || []);
-    state.offset = offset + (data.contents || []).length;
-    state.totalCount = Number(data.totalCount || 0);
+    const fetchedItems = Array.isArray(data.contents) ? data.contents : [];
+    const uniqueCmsItems = fetchedItems.filter((item) => !CODE_ADDED_NORMALIZED_POST_URLS.has(safeXPostUrl(item.post_url)));
+    const duplicateCount = fetchedItems.length - uniqueCmsItems.length;
+    if (offset === 0) {
+      state.items = [...CODE_ADDED_WORKS, ...uniqueCmsItems];
+      state.cmsDuplicateCount = duplicateCount;
+    } else {
+      state.items = state.items.concat(uniqueCmsItems);
+      state.cmsDuplicateCount += duplicateCount;
+    }
+    state.offset = offset + fetchedItems.length;
+    state.cmsTotalCount = Math.max(0, Number(data.totalCount || 0) - state.cmsDuplicateCount);
+    state.totalCount = state.cmsTotalCount + CODE_ADDED_WORKS.length;
     renderWorks();
   } catch {
     state.loading = false;
     grid.setAttribute("aria-busy", "false");
-    countNode.textContent = "読み込み中";
-    statusNode.textContent = "作品を読み込めませんでした。時間をおいて再度お試しください。";
+    countNode.textContent = state.totalCount ? `${state.totalCount}件` : "読み込み中";
+    statusNode.textContent = state.items.length
+      ? "ほかの作品を読み込めませんでした。時間をおいて再度お試しください。"
+      : "作品を読み込めませんでした。時間をおいて再度お試しください。";
   } finally {
     state.loading = false;
     loadMoreButton.disabled = false;
@@ -283,7 +311,7 @@ searchInput.addEventListener("input", () => {
 });
 
 loadMoreButton.addEventListener("click", () => {
-  if (!state.loading && state.offset < state.totalCount) fetchPage(state.offset);
+  if (!state.loading && state.offset < state.cmsTotalCount) fetchPage(state.offset);
 });
 
 form?.addEventListener("submit", async (event) => {
@@ -331,4 +359,5 @@ form?.addEventListener("submit", async (event) => {
 });
 
 if (form) readConfig();
+renderWorks();
 fetchPage();
