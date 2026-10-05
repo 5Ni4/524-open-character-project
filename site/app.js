@@ -11,7 +11,7 @@ const submitButton = document.querySelector("#submit-button");
 
 const CODE_ADDED_WORKS = [
   {
-    title: "X投稿",
+    title: "524作ったよ",
     post_url: "https://x.com/mae616_/status/2106361379490074906",
     creator_name: "@mae616_",
     creator_url: "https://x.com/mae616_",
