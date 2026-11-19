@@ -225,6 +225,550 @@ const CODE_ADDED_WORKS = [
     "creator_url": "https://x.com/R5ni4",
     "category": "グッズ",
     "comment": ""
+  },
+  {
+    "title": "展示会でもらった524と自分の524の3Dフィギュア",
+    "post_url": "https://x.com/R5ni4/status/2102690943472431114",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "映画館を埋めつくす524たち",
+    "post_url": "https://x.com/R5ni4/status/2104905358175285328",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "フェルトの524ぬい",
+    "post_url": "https://x.com/R5ni4/status/2113551442602865098",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "門下生が持ってきた524グッズ",
+    "post_url": "https://x.com/R5ni4/status/2114687032647987683",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "ほーきーさんのプレートと缶バッジ",
+    "post_url": "https://x.com/R5ni4/status/2114688116015726858",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "せいばーさん宅の524（実写合成）",
+    "post_url": "https://x.com/R5ni4/status/2121159530944024939",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "オフィスに524（実写合成）",
+    "post_url": "https://x.com/R5ni4/status/2121165210866368735",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "ぱんだめし",
+    "post_url": "https://x.com/R5ni4/status/2123404280149459120",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "「524増殖中」524がたくさん並ぶ画像",
+    "post_url": "https://x.com/hawkymisc/status/2087110635721281792",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "数字の人が毎日入退社するゲーム（入退社ラッシュ系）",
+    "post_url": "https://x.com/aka_keishin/status/2098186359936823537",
+    "creator_name": "かんだ",
+    "creator_url": "https://x.com/aka_keishin",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "524を流れ星にした画像",
+    "post_url": "https://x.com/sorafujitani/status/2098203097428545707",
+    "creator_name": "sora",
+    "creator_url": "https://x.com/sorafujitani",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "頭が割れた524の画像",
+    "post_url": "https://x.com/hawkymisc/status/2100576853320974382",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "箱庭ゲームに524が遊びに来た動画",
+    "post_url": "https://x.com/mama_vibecoding/status/2100908873255407837",
+    "creator_name": "Miki🎃🐈‍⬛",
+    "creator_url": "https://x.com/mama_vibecoding",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "524コイン（3Dプリント）",
+    "post_url": "https://x.com/Sagasa8045/status/2101497982902559042",
+    "creator_name": "さが@迷えるインドア派アニオタSEおじ",
+    "creator_url": "https://x.com/Sagasa8045",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "趣のある524デザイン画像",
+    "post_url": "https://x.com/hawkymisc/status/2101663518433198307",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524貨幣（本気モード・展示会に持参）",
+    "post_url": "https://x.com/verigridlabs/status/2101969939158745364",
+    "creator_name": "VeriGrid",
+    "creator_url": "https://x.com/verigridlabs",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "524銅像と銅貨（3Dプリント）",
+    "post_url": "https://x.com/Saber5656/status/2102240748582400306",
+    "creator_name": "せいばー",
+    "creator_url": "https://x.com/Saber5656",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "R-524の概念を擬人化したイラスト",
+    "post_url": "https://x.com/hawkymisc/status/2102328521733603483",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "本人そっくりに画像生成された524",
+    "post_url": "https://x.com/kouyama_fms/status/2102380511721336906",
+    "creator_name": "こうやま🦦 (univ.)",
+    "creator_url": "https://x.com/kouyama_fms",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "洞窟の壁画に描かれた524（クロマニョンMMO）",
+    "post_url": "https://x.com/yurinakanishi33/status/2102398538059759892",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "クロマニョンMMOに登場する524（撫でると懐く）",
+    "post_url": "https://x.com/yurinakanishi33/status/2102536273181475149",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "瀕死524",
+    "post_url": "https://x.com/hawkymisc/status/2102767879183552730",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "ChatGPTが考えたR-524さん（擬人化）",
+    "post_url": "https://x.com/tori_kizi/status/2103346691697168423",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "524擬人化イラスト（#さがAIイラスト）",
+    "post_url": "https://x.com/Sagasa8045/status/2103410622151213436",
+    "creator_name": "さが@迷えるインドア派アニオタSEおじ",
+    "creator_url": "https://x.com/Sagasa8045",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "524擬人化 別バージョン",
+    "post_url": "https://x.com/tori_kizi/status/2103432197013381383",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "524擬人化 さらに別バージョン（大人524）",
+    "post_url": "https://x.com/tori_kizi/status/2103434224703557733",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "niji7で生成した524",
+    "post_url": "https://x.com/mae616_/status/2103455969284170030",
+    "creator_name": "mae616 : 今川焼き",
+    "creator_url": "https://x.com/mae616_",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524色の524",
+    "post_url": "https://x.com/kouyama_fms/status/2103469614105854106",
+    "creator_name": "こうやま🦦 (univ.)",
+    "creator_url": "https://x.com/kouyama_fms",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "AI-comm Fighters（524参戦の格闘ゲーム）",
+    "post_url": "https://x.com/hawkymisc/status/2103688519881576716",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "マッチョ524ほか まとめ",
+    "post_url": "https://x.com/tori_kizi/status/2103744024347849020",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524キーホルダー（3Dプリント）",
+    "post_url": "https://x.com/Saber5656/status/2104218597593931933",
+    "creator_name": "せいばー",
+    "creator_url": "https://x.com/Saber5656",
+    "category": "グッズ",
+    "comment": ""
+  },
+  {
+    "title": "色相の濁った524",
+    "post_url": "https://x.com/hawkymisc/status/2104264989393703238",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524スニーカーの3Dモデルデータ",
+    "post_url": "https://x.com/tori_kizi/status/2104493775641100753",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524が524匹",
+    "post_url": "https://x.com/asahina_AIauto/status/2104583132066590762",
+    "creator_name": "朝日南",
+    "creator_url": "https://x.com/asahina_AIauto",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524 Agent Bots Workspace",
+    "post_url": "https://x.com/hawkymisc/status/2104952132227194883",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "524と触れ合うノベルアドベンチャーゲーム",
+    "post_url": "https://x.com/tori_kizi/status/2105246363017752706",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "524ノベルゲームの紹介動画",
+    "post_url": "https://x.com/tori_kizi/status/2105438574971949312",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "524を操作する横スクロールシューティング",
+    "post_url": "https://x.com/tori_kizi/status/2105627489871822860",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "524スリング！（ゲーム）",
+    "post_url": "https://x.com/musicianmayo/status/2106083528144490613",
+    "creator_name": "真夜中らとり",
+    "creator_url": "https://x.com/musicianmayo",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "ディアルガ vs パルキア vs 524",
+    "post_url": "https://x.com/tori_kizi/status/2106155090310770766",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524が現代社会に転生して入退社芸をするストーリー",
+    "post_url": "https://x.com/Saber5656/status/2106220454117810476",
+    "creator_name": "せいばー",
+    "creator_url": "https://x.com/Saber5656",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "524でパシャリ（ゲーム）",
+    "post_url": "https://x.com/musicianmayo/status/2106328724845257028",
+    "creator_name": "真夜中らとり",
+    "creator_url": "https://x.com/musicianmayo",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "AICatchup会場の524の壁画",
+    "post_url": "https://x.com/Jank0vic/status/2106353918230036813",
+    "creator_name": "やんこ・タコス・ビリヤニ・個人開発",
+    "creator_url": "https://x.com/Jank0vic",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "分別５２４（ゲーム）",
+    "post_url": "https://x.com/musicianmayo/status/2106413707958108478",
+    "creator_name": "真夜中らとり",
+    "creator_url": "https://x.com/musicianmayo",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "524ころがり（ゲーム）",
+    "post_url": "https://x.com/tori_kizi/status/2106892798628946266",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "毛並みがあって光る524がコーディング",
+    "post_url": "https://x.com/eerm16g/status/2107133091420762447",
+    "creator_name": "りさ",
+    "creator_url": "https://x.com/eerm16g",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524っち（育成ゲーム風）",
+    "post_url": "https://x.com/yurinakanishi33/status/2107462627404427301",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "M5Stack StopWatchで遊べる524",
+    "post_url": "https://x.com/tori_kizi/status/2107635438278377818",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "524号病棟",
+    "post_url": "https://x.com/kamimochi_2101/status/2108361004669399299",
+    "creator_name": "かみもち@AI×量子×中小企業診断士",
+    "creator_url": "https://x.com/kamimochi_2101",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524の加護を得たURATA（AI-comm Fighters）",
+    "post_url": "https://x.com/hawkieslab/status/2108581708316676452",
+    "creator_name": "Hawkie's App and Game Lab",
+    "creator_url": "https://x.com/hawkieslab",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "５２４まぎれこみ！（ゲーム）",
+    "post_url": "https://x.com/musicianmayo/status/2108956902206111795",
+    "creator_name": "真夜中らとり",
+    "creator_url": "https://x.com/musicianmayo",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "今日の #524indabuilding",
+    "post_url": "https://x.com/livevibecoding/status/2109068649667723264",
+    "creator_name": "OG おーじ",
+    "creator_url": "https://x.com/livevibecoding",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "増殖する524",
+    "post_url": "https://x.com/livevibecoding/status/2109081518954180695",
+    "creator_name": "OG おーじ",
+    "creator_url": "https://x.com/livevibecoding",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "居酒屋でSaberさんが作った524",
+    "post_url": "https://x.com/yurinakanishi33/status/2109231028942561315",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "野生の524（実物）",
+    "post_url": "https://x.com/eerm16g/status/2109560294620152305",
+    "creator_name": "りさ",
+    "creator_url": "https://x.com/eerm16g",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "524なう（Saberさん提供の実物）",
+    "post_url": "https://x.com/daredaro_F/status/2109566673783333222",
+    "creator_name": "匿名F＠構造婚",
+    "creator_url": "https://x.com/daredaro_F",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "524と超かぐや姫",
+    "post_url": "https://x.com/eerm16g/status/2109672401596555362",
+    "creator_name": "りさ",
+    "creator_url": "https://x.com/eerm16g",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "クロマニョンMMOを遊べるように公開（524登場）",
+    "post_url": "https://x.com/yurinakanishi33/status/2111382809659285917",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "踊る524",
+    "post_url": "https://x.com/marulimoai/status/2111762054751437285",
+    "creator_name": "まるぃも",
+    "creator_url": "https://x.com/marulimoai",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "Saberさん作の524フィギュア",
+    "post_url": "https://x.com/yurinakanishi33/status/2112137860442902817",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "勝手に絞られる524",
+    "post_url": "https://x.com/Saber5656/status/2112146186190860476",
+    "creator_name": "せいばー",
+    "creator_url": "https://x.com/Saber5656",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "入退社芸人プレート（ほーきーさん作）",
+    "post_url": "https://x.com/yurinakanishi33/status/2114683223070666974",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "グッズ",
+    "comment": ""
+  },
+  {
+    "title": "524増殖中",
+    "post_url": "https://x.com/hawkymisc/status/2114683712025849883",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "入退社芸人グッズ（524感を出す改良版）",
+    "post_url": "https://x.com/hawkymisc/status/2115127520974741833",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "グッズ",
+    "comment": ""
+  },
+  {
+    "title": "#さがAIイラスト の524",
+    "post_url": "https://x.com/Sagasa8045/status/2117219957356605542",
+    "creator_name": "さが@迷えるインドア派アニオタSEおじ",
+    "creator_url": "https://x.com/Sagasa8045",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "Saberさんの机にいる524",
+    "post_url": "https://x.com/suna_gaku/status/2120741509054267586",
+    "creator_name": "スナガク | Codexではじめるエージェンティックコーディング",
+    "creator_url": "https://x.com/suna_gaku",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "524ラーメン315",
+    "post_url": "https://x.com/orange_kon0817/status/2120883963464200478",
+    "creator_name": "じゅり",
+    "creator_url": "https://x.com/orange_kon0817",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "食べ物のイラストになった524",
+    "post_url": "https://x.com/Mia7Ritter/status/2122283864383160685",
+    "creator_name": "𝐌𝐢𝐚",
+    "creator_url": "https://x.com/Mia7Ritter",
+    "category": "イラスト・画像",
+    "comment": ""
   }
 ];
 
