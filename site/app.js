@@ -11,13 +11,221 @@ const submitButton = document.querySelector("#submit-button");
 
 const CODE_ADDED_WORKS = [
   {
-    title: "524作ったよ",
-    post_url: "https://x.com/mae616_/status/2106361379490074906",
-    creator_name: "@mae616_",
-    creator_url: "https://x.com/mae616_",
-    category: "その他",
-    comment: "",
+    "title": "524の3Dモデル画像（黄色・斜めアングル）",
+    "post_url": "https://x.com/asahina_AIauto/status/2099976264325247317",
+    "creator_name": "朝日南",
+    "creator_url": "https://x.com/asahina_AIauto",
+    "category": "イラスト・画像",
+    "comment": ""
   },
+  {
+    "title": "3D化用に生成した、手足と槍・毛皮の524",
+    "post_url": "https://x.com/yurinakanishi33/status/2100383351547044054",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "白い524フィギュアの3Dプリント途中",
+    "post_url": "https://x.com/asahina_AIauto/status/2101667333966332386",
+    "creator_name": "朝日南",
+    "creator_url": "https://x.com/asahina_AIauto",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "524擬人化のキャラクターシート（黄パーカー・呪耐性付き）",
+    "post_url": "https://x.com/Saber5656/status/2103367386036617645",
+    "creator_name": "せいばー",
+    "creator_url": "https://x.com/Saber5656",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "524擬人化キャラクターシートとグッズ案",
+    "post_url": "https://x.com/hawkymisc/status/2103374586373149153",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "524ちゃん擬人化キャラクターシート（ねこみみフード）",
+    "post_url": "https://x.com/marulimoai/status/2103463412919623863",
+    "creator_name": "まるぃも",
+    "creator_url": "https://x.com/marulimoai",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "524ファッションの全身コーデ生成（4枚）",
+    "post_url": "https://x.com/Sagasa8045/status/2103645393355776257",
+    "creator_name": "さが@迷えるインドア派アニオタSEおじ",
+    "creator_url": "https://x.com/Sagasa8045",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524擬人化イラスト（黄色フード・水鉄砲）",
+    "post_url": "https://x.com/YoukeyKaydow/status/2103665863081758979",
+    "creator_name": "階堂ゆうき",
+    "creator_url": "https://x.com/YoukeyKaydow",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524の画像投稿（中身は要確認）",
+    "post_url": "https://x.com/mae616_/status/2103859028199985639",
+    "creator_name": "mae616 : 今川焼き",
+    "creator_url": "https://x.com/mae616_",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "リアル空間で524をいじれるショート動画",
+    "post_url": "https://x.com/Saber5656/status/2104222613296107742",
+    "creator_name": "せいばー",
+    "creator_url": "https://x.com/Saber5656",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "小さな524を集めて描いた「524」の文字",
+    "post_url": "https://x.com/asahina_AIauto/status/2104590351768195267",
+    "creator_name": "朝日南",
+    "creator_url": "https://x.com/asahina_AIauto",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "同人誌即売会風の「524屋」ブース",
+    "post_url": "https://x.com/mae616_/status/2104859872127074646",
+    "creator_name": "mae616 : 今川焼き",
+    "creator_url": "https://x.com/mae616_",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524の素因数分解ツリー（524=2×2×131）",
+    "post_url": "https://x.com/kamimochi_2101/status/2105287867727757350",
+    "creator_name": "かみもち@AI×量子×中小企業診断士",
+    "creator_url": "https://x.com/kamimochi_2101",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "524ちゃんのお友達がぷるんぷるんするゼリーのWeb実験",
+    "post_url": "https://x.com/mama_vibecoding/status/2106218846445256893",
+    "creator_name": "Miki",
+    "creator_url": "https://x.com/mama_vibecoding",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "「524作ったよ」",
+    "post_url": "https://x.com/mae616_/status/2106361379490074906",
+    "creator_name": "mae616 : 今川焼き",
+    "creator_url": "https://x.com/mae616_",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "ブラウザゲーム「５２４ホームラン！」の発表動画",
+    "post_url": "https://x.com/musicianmayo/status/2106842951980888353",
+    "creator_name": "真夜中らとり",
+    "creator_url": "https://x.com/musicianmayo",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "ブラウザゲーム「５２４クレーン！」の発表動画",
+    "post_url": "https://x.com/musicianmayo/status/2109825982979080579",
+    "creator_name": "真夜中らとり",
+    "creator_url": "https://x.com/musicianmayo",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "3Dプリントした「入退社芸人」プレート",
+    "post_url": "https://x.com/hawkymisc/status/2114575567161008437",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "グッズ",
+    "comment": ""
+  },
+  {
+    "title": "もらった入退社芸人バッジの実物写真",
+    "post_url": "https://x.com/yurinakanishi33/status/2121524966546117105",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "7人7色の524スニーカー",
+    "post_url": "https://x.com/R5ni4/status/2103651609783988437",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "お布団で眠る524",
+    "post_url": "https://x.com/R5ni4/status/2103867317998526904",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "食パンのベッドで眠る524（#おやすみ524）",
+    "post_url": "https://x.com/R5ni4/status/2103869843632197793",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "クロワッサンのベッドで眠る524（#おやすみ524）",
+    "post_url": "https://x.com/R5ni4/status/2104208743588413811",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524タピ",
+    "post_url": "https://x.com/R5ni4/status/2110689925251371285",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "チョコミントの524",
+    "post_url": "https://x.com/R5ni4/status/2113266775765004749",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "入退社芸人の謝罪会見",
+    "post_url": "https://x.com/R5ni4/status/2122679856995750133",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "Suicaのシール",
+    "post_url": "https://x.com/R5ni4/status/2123007197722599714",
+    "creator_name": "R-524",
+    "creator_url": "https://x.com/R5ni4",
+    "category": "グッズ",
+    "comment": ""
+  }
 ];
 
 const state = {
