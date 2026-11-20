@@ -60,3 +60,11 @@ Turnstileには、本番サイトの`pages.dev`ホスト名を登録します。
 4. 管理画面で作者・投稿・内容を確認して公開します。
 
 Xの投稿画像はXの埋め込み表示を使います。投稿が削除・非公開化された場合などは、X側の仕様で画像が表示されなくなることがあります。
+
+## GitHubからの公開
+
+`.github/workflows/publish-pages.yml` は、main の `site/`、`functions/`、`wrangler.jsonc`、公開処理自身の変更で実行されます。Actions画面から手動実行もできます。公開先は既存の `524-open-character-project` に固定しています。
+
+初回に、対象Cloudflareアカウントの「Account → Cloudflare Pages → Edit」を許可したAPIトークンを、リポジトリのActionsシークレット `CLOUDFLARE_API_TOKEN` に登録してください。トークン本文はソースやチャットへ貼らないでください。アカウントIDはワークフローに設定済みです。
+
+公開処理は作品URLと重複、専用ギャラリーの存在を検査し、WranglerでFunctionsを含めて公開します。公開後はトップ・`/works/`・JavaScript・CSSを読み戻して、その実行のソースとの一致を確認します。キーが未登録なら公開前に停止します。設定を保存しただけでは公開済みになりません。
