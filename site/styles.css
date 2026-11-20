@@ -100,9 +100,13 @@ button { color: inherit; }
 .work-author a { text-decoration: none; }
 .work-author a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .work-note { margin: 0 0 12px; color: #51696b; font-size: 11px; line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; }
-.tweet-shell { min-height: 80px; overflow: hidden; border-radius: 12px; background: #f5f9f7; }
-.tweet-shell blockquote.twitter-tweet { margin: 0 !important; }
-.tweet-fallback { display: inline-flex; align-items: center; gap: 8px; padding: 16px; color: var(--cyan-dark); font-size: 12px; font-weight: 700; text-decoration: none; }
+.tweet-shell { min-height: 350px; overflow: hidden; border-radius: 12px; background: #f5f9f7; }
+.tweet-shell.is-embedded { min-height: 0; background: transparent; }
+.tweet-shell.is-unavailable { min-height: 80px; }
+.tweet-embed { min-width: 0; }
+.tweet-embed .twitter-tweet { margin: 0 !important; }
+.tweet-fallback { display: inline-flex; align-items: center; gap: 8px; padding: 16px; color: var(--cyan-dark); font-size: 14px; font-weight: 700; text-decoration: none; }
+.tweet-fallback[hidden] { display: none; }
 .tweet-fallback:hover { text-decoration: underline; }
 .empty-state { display: grid; min-height: 230px; place-items: center; padding: 35px 20px; border: 1px dashed rgba(23,56,59,.25); border-radius: 24px; background: rgba(255,255,255,.45); text-align: center; }
 .empty-icon { display: grid; width: 52px; height: 52px; margin: 0 auto 12px; place-items: center; border-radius: 18px; color: var(--orange); background: var(--yellow); font-family: "DM Sans", sans-serif; font-size: 20px; font-weight: 900; transform: rotate(-5deg); }

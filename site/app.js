@@ -769,6 +769,214 @@ const CODE_ADDED_WORKS = [
     "creator_url": "https://x.com/Mia7Ritter",
     "category": "イラスト・画像",
     "comment": ""
+  },
+  {
+    "title": "524作品の最終版キャプチャ",
+    "post_url": "https://x.com/hawkymisc/status/2087083450939609351",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "AI界隈有名人の格闘ゲームに524参戦（紹介ポスト）",
+    "post_url": "https://x.com/marulimoai/status/2099829910617592058",
+    "creator_name": "まるぃも",
+    "creator_url": "https://x.com/marulimoai",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "524が「生まれてる」画像",
+    "post_url": "https://x.com/asahina_AIauto/status/2101675558837100970",
+    "creator_name": "朝日南",
+    "creator_url": "https://x.com/asahina_AIauto",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "展示会の524ブース写真",
+    "post_url": "https://x.com/sat0xshi/status/2102645157145481228",
+    "creator_name": "sat0xshi",
+    "creator_url": "https://x.com/sat0xshi",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "524 in da building",
+    "post_url": "https://x.com/livevibecoding/status/2102869490577068292",
+    "creator_name": "OG おーじ",
+    "creator_url": "https://x.com/livevibecoding",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524スニーカーたち",
+    "post_url": "https://x.com/tori_kizi/status/2104124243873268147",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524の飛行機コラボ案",
+    "post_url": "https://x.com/asahina_AIauto/status/2104920662347513961",
+    "creator_name": "朝日南",
+    "creator_url": "https://x.com/asahina_AIauto",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "524のお友達メーカーで作ったお友達（目が401）",
+    "post_url": "https://x.com/4o1sobblue/status/2104946727652647391",
+    "creator_name": "aoi＠11/23 技術書典21【さ01】",
+    "creator_url": "https://x.com/4o1sobblue",
+    "category": "設定・アイデア",
+    "comment": ""
+  },
+  {
+    "title": "524の南京錠",
+    "post_url": "https://x.com/yurinakanishi33/status/2105205185811468289",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "「うちの524ﾁｬﾝが作ってくれました」画像",
+    "post_url": "https://x.com/eerm16g/status/2105572411173376126",
+    "creator_name": "りさ",
+    "creator_url": "https://x.com/eerm16g",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "AICatchup会場の524（右の524）",
+    "post_url": "https://x.com/grayscale_alpha/status/2106354051025895846",
+    "creator_name": "Kei Yagi",
+    "creator_url": "https://x.com/grayscale_alpha",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "524登場の速席アプリ（mae616_さん作）",
+    "post_url": "https://x.com/hirococoro/status/2106355247828586527",
+    "creator_name": "内海裕子(hiroko utsumi)",
+    "creator_url": "https://x.com/hirococoro",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "OpenAI SideQuestで作った524画像",
+    "post_url": "https://x.com/mae616_/status/2106448184654614562",
+    "creator_name": "mae616 : 今川焼き",
+    "creator_url": "https://x.com/mae616_",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "524の画像（筆で生まれた524への反応）",
+    "post_url": "https://x.com/tori_kizi/status/2106660105588748648",
+    "creator_name": "トリキジ",
+    "creator_url": "https://x.com/tori_kizi",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "CRO NEKIで524と対戦",
+    "post_url": "https://x.com/yurinakanishi33/status/2107636300191043886",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "524キーホルダー制作の材料",
+    "post_url": "https://x.com/Saber5656/status/2108550770786501012",
+    "creator_name": "せいばー",
+    "creator_url": "https://x.com/Saber5656",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "524524524 画像",
+    "post_url": "https://x.com/livevibecoding/status/2109068961879105580",
+    "creator_name": "OG おーじ",
+    "creator_url": "https://x.com/livevibecoding",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "5245245245245（草原の524）",
+    "post_url": "https://x.com/livevibecoding/status/2109086798362423577",
+    "creator_name": "OG おーじ",
+    "creator_url": "https://x.com/livevibecoding",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "トレーナーのいる524",
+    "post_url": "https://x.com/hawkymisc/status/2109646616768713029",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "Saberさん作の524フィギュア（紹介）",
+    "post_url": "https://x.com/yurinakanishi33/status/2110753699153023064",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "壁画アイデアを524投稿から借りたゲーム",
+    "post_url": "https://x.com/yurinakanishi33/status/2112113049587073484",
+    "creator_name": "yuri",
+    "creator_url": "https://x.com/yurinakanishi33",
+    "category": "その他",
+    "comment": ""
+  },
+  {
+    "title": "524スポンサー",
+    "post_url": "https://x.com/sorafujitani/status/2112842040598012096",
+    "creator_name": "sora",
+    "creator_url": "https://x.com/sorafujitani",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "R-524が握る寿司",
+    "post_url": "https://x.com/hawkymisc/status/2113294982459302012",
+    "creator_name": "ほーきー(Hawkie)",
+    "creator_url": "https://x.com/hawkymisc",
+    "category": "イラスト・画像",
+    "comment": ""
+  },
+  {
+    "title": "からしに紛れた524",
+    "post_url": "https://x.com/vibe_walking/status/2114717903761363206",
+    "creator_name": "りも(Limo)",
+    "creator_url": "https://x.com/vibe_walking",
+    "category": "写真・実物",
+    "comment": ""
+  },
+  {
+    "title": "入退社公式グッズ",
+    "post_url": "https://x.com/marulimoai/status/2114841647737667667",
+    "creator_name": "まるぃも",
+    "creator_url": "https://x.com/marulimoai",
+    "category": "グッズ",
+    "comment": ""
+  },
+  {
+    "title": "Fable 5.2の紹介動画（524登場）",
+    "post_url": "https://x.com/mae616_/status/2120098240137933055",
+    "creator_name": "mae616 : 今川焼き",
+    "creator_url": "https://x.com/mae616_",
+    "category": "その他",
+    "comment": ""
   }
 ];
 
@@ -890,16 +1098,16 @@ function addWorkCard(item) {
 
   const embed = document.createElement("div");
   embed.className = "tweet-shell";
-  const quote = document.createElement("blockquote");
-  quote.className = "twitter-tweet";
+  embed.dataset.postId = postUrl.split("/").pop();
+  const target = document.createElement("div");
+  target.className = "tweet-embed";
   const fallback = document.createElement("a");
   fallback.className = "tweet-fallback";
   fallback.href = postUrl;
   fallback.target = "_blank";
   fallback.rel = "noopener noreferrer";
-  fallback.textContent = "Xで投稿を見る ↗";
-  quote.append(fallback);
-  embed.append(quote);
+  fallback.textContent = "Xで投稿を見る";
+  embed.append(target, fallback);
 
   card.append(meta, author, note, embed);
   return card;
@@ -946,25 +1154,69 @@ function renderWorks() {
   loadMoreButton.hidden = state.offset >= state.cmsTotalCount || !state.configured;
   loadMoreButton.disabled = state.loading;
   loadMoreButton.textContent = state.loading ? "読み込み中…" : "もっと見る ↓";
-  if (cards.length) loadXEmbeds();
+  loadXEmbeds();
 }
 
 let widgetLoading;
-function loadXEmbeds() {
-  if (window.twttr?.widgets?.load) {
-    window.twttr.widgets.load(grid);
-    return;
-  }
-  if (widgetLoading) return;
+function getXWidgets() {
+  if (window.twttr?.widgets?.createTweet) return Promise.resolve(window.twttr.widgets);
+  if (widgetLoading) return widgetLoading;
   widgetLoading = new Promise((resolve) => {
     const script = document.createElement("script");
     script.src = "https://platform.twitter.com/widgets.js";
     script.async = true;
     script.charset = "utf-8";
-    script.onload = resolve;
-    script.onerror = resolve;
+    script.onload = () => resolve(window.twttr?.widgets?.createTweet ? window.twttr.widgets : null);
+    script.onerror = () => resolve(null);
     document.head.append(script);
-  }).then(() => window.twttr?.widgets?.load?.(grid));
+  });
+  return widgetLoading;
+}
+
+async function renderXEmbed(shell) {
+  if (!shell.isConnected || shell.dataset.embedState) return;
+  shell.dataset.embedState = "loading";
+  const widgets = await getXWidgets();
+  if (!shell.isConnected) return;
+  const target = shell.querySelector(".tweet-embed");
+  const fallback = shell.querySelector(".tweet-fallback");
+  try {
+    const tweet = widgets && await widgets.createTweet(shell.dataset.postId, target, {
+      lang: "ja",
+      dnt: true,
+      conversation: "none",
+      align: "center",
+    });
+    if (!shell.isConnected) return;
+    if (tweet) {
+      fallback.hidden = true;
+      shell.dataset.embedState = "ready";
+      shell.classList.add("is-embedded");
+      return;
+    }
+  } catch {
+    // Keep the original post accessible if X cannot render it.
+  }
+  shell.dataset.embedState = "unavailable";
+  shell.classList.add("is-unavailable");
+}
+
+let embedObserver;
+function loadXEmbeds() {
+  embedObserver?.disconnect();
+  const shells = grid.querySelectorAll(".tweet-shell[data-post-id]");
+  if (!("IntersectionObserver" in window)) {
+    shells.forEach(renderXEmbed);
+    return;
+  }
+  embedObserver = new window.IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      observer.unobserve(entry.target);
+      renderXEmbed(entry.target);
+    });
+  }, { rootMargin: "400px 0px" });
+  shells.forEach((shell) => embedObserver.observe(shell));
 }
 
 async function fetchPage(offset = 0) {
@@ -976,6 +1228,8 @@ async function fetchPage(offset = 0) {
     const data = await response.json();
     state.configured = Boolean(data.configured);
     const fetchedItems = Array.isArray(data.contents) ? data.contents : [];
+    const keepExistingCards = offset === 0 && !state.configured && fetchedItems.length === 0
+      && state.items.length === CODE_ADDED_WORKS.length;
     const uniqueCmsItems = fetchedItems.filter((item) => !CODE_ADDED_NORMALIZED_POST_URLS.has(safeXPostUrl(item.post_url)));
     const duplicateCount = fetchedItems.length - uniqueCmsItems.length;
     if (offset === 0) {
@@ -988,7 +1242,12 @@ async function fetchPage(offset = 0) {
     state.offset = offset + fetchedItems.length;
     state.cmsTotalCount = Math.max(0, Number(data.totalCount || 0) - state.cmsDuplicateCount);
     state.totalCount = state.cmsTotalCount + CODE_ADDED_WORKS.length;
-    renderWorks();
+    if (keepExistingCards) {
+      // Keep embeds already loading when no additional CMS source is configured.
+      loadMoreButton.hidden = true;
+    } else {
+      renderWorks();
+    }
   } catch {
     state.loading = false;
     grid.setAttribute("aria-busy", "false");
