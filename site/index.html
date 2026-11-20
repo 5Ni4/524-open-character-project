@@ -23,8 +23,8 @@
     <title>524のひみつ基地</title>
     <link rel="icon" type="image/png" href="/assets/favicon-524.png" />
     <link rel="preconnect" href="https://platform.twitter.com" />
-    <link rel="stylesheet" href="/styles.css?v=compact-20261120" />
-    <script src="/app.js?v=community-compact-20261120" defer></script>
+    <link rel="stylesheet" href="/styles.css?v=carousel-20261120" />
+    <script src="/app.js?v=community-carousel-20261120" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#works">作品一覧へ</a>
@@ -69,10 +69,18 @@
         </div>
         <div class="gallery-category-links" id="category-links" aria-label="作品の種類から探す"></div>
         <div class="gallery-status" id="gallery-status" role="status" aria-live="polite"></div>
-        <div class="works-grid" id="works-grid" data-mode="preview" aria-busy="true"></div>
-        <div class="gallery-preview-footer">
-          <p>ここで紹介するのは、ほんの一部。お気に入りの524を探しに。</p>
-          <a class="button button-primary" href="/works/">すべてみる</a>
+        <div class="tweet-carousel" role="region" aria-roledescription="カルーセル" aria-labelledby="works-title">
+          <div class="works-grid tweet-carousel-track" id="works-grid" data-mode="preview" aria-busy="true" tabindex="0" aria-label="Xの作品投稿" aria-describedby="carousel-help"></div>
+          <div class="gallery-preview-footer">
+            <div class="carousel-navigation">
+              <p id="carousel-help">横にスワイプしてみる</p>
+              <div class="carousel-controls" role="group" aria-label="投稿の切り替え">
+                <button type="button" id="carousel-prev" aria-label="前の投稿へ" aria-controls="works-grid" disabled>前へ</button>
+                <button type="button" id="carousel-next" aria-label="次の投稿へ" aria-controls="works-grid" disabled>次へ</button>
+              </div>
+            </div>
+            <a class="button button-primary" href="/works/">すべてみる</a>
+          </div>
         </div>
       </section>
 

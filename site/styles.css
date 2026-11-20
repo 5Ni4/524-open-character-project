@@ -246,6 +246,15 @@ button { color: inherit; }
 .gallery-preview-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 28px; }
 .gallery-preview-footer p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .gallery-preview-footer .button { flex-shrink: 0; gap: 0; font-size: 14px; }
+.tweet-carousel { min-width: 0; }
+.works-preview .tweet-carousel-track { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: calc((100% - 32px) / 2.25); gap: 18px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 4px 2px 18px; scrollbar-width: thin; scrollbar-color: var(--cyan-dark) transparent; }
+.tweet-carousel-track > .work-card { scroll-snap-align: start; }
+.tweet-carousel-track:focus-visible { outline: 2px solid var(--cyan-dark); outline-offset: 4px; border-radius: 12px; }
+.carousel-navigation { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; }
+.carousel-controls { display: flex; gap: 8px; }
+.carousel-controls button { display: inline-flex; min-width: 64px; min-height: 44px; align-items: center; justify-content: center; padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); background: var(--white); font-size: 14px; font-weight: 700; cursor: pointer; }
+.carousel-controls button:hover:not(:disabled) { border-color: var(--cyan-dark); color: var(--cyan-dark); }
+.carousel-controls button:disabled { opacity: .4; cursor: default; }
 .works-preview .section-description { font-size: 16px; }
 .hero-actions a[href="/works/"] { font-size: 14px; }
 .gallery-hero { display: grid; grid-template-columns: 1fr 104px; align-items: center; gap: 30px; margin-top: 20px; margin-bottom: 40px; padding: 40px 44px; border-radius: 28px; background: var(--cyan); }
@@ -264,6 +273,7 @@ button { color: inherit; }
 .gallery-bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: 64px; }
 .gallery-bottom .text-link { font-size: 16px; }
 @media (max-width: 780px) {
+  .works-preview .tweet-carousel-track { grid-auto-columns: min(360px, 100%); }
   .gallery-preview-footer { align-items: flex-start; flex-direction: column; gap: 16px; }
   .gallery-hero { grid-template-columns: 1fr; padding: 28px 24px; }
   .gallery-hero img { display: none; }

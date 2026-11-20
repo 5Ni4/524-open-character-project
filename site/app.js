@@ -8,6 +8,8 @@ const form = document.querySelector("#submission-form");
 const formStatus = document.querySelector("#form-status");
 const submitButton = document.querySelector("#submit-button");
 const isGalleryPreview = grid?.dataset.mode === "preview";
+const carouselPrevious = document.querySelector("#carousel-prev");
+const carouselNext = document.querySelector("#carousel-next");
 const galleryCategories = ["イラスト・画像", "設定・アイデア", "グッズ", "写真・実物", "その他"];
 const initialParams = new URLSearchParams(window.location?.search || "");
 
@@ -1060,6 +1062,11 @@ function addWorkCard(item) {
 
   const card = document.createElement("article");
   card.className = "work-card";
+  if (isGalleryPreview) {
+    card.setAttribute("role", "group");
+    card.setAttribute("aria-roledescription", "スライド");
+    card.setAttribute("aria-label", item.title || "Xの作品投稿");
+  }
   card.dataset.category = typeof item.category === "string" ? item.category : "その他";
   card.dataset.search = [item.title, item.creator_name, item.comment, item.category].filter(Boolean).join(" ").toLocaleLowerCase("ja");
 
@@ -1159,6 +1166,40 @@ function updateGalleryQuery() {
   window.history.replaceState(null, "", `${window.location.pathname}${query ? `?${query}` : ""}`);
 }
 
+function carouselLimit() {
+  return Math.max(0, (grid.scrollWidth || 0) - (grid.clientWidth || 0));
+}
+
+function updateCarouselControls() {
+  if (!isGalleryPreview || !carouselPrevious || !carouselNext) return;
+  const limit = carouselLimit();
+  const left = Math.max(0, grid.scrollLeft || 0);
+  carouselPrevious.disabled = left <= 2 || limit <= 2;
+  carouselNext.disabled = left >= limit - 2 || limit <= 2;
+}
+
+function scrollCarousel(left) {
+  const target = Math.max(0, Math.min(left, carouselLimit()));
+  const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  if (grid.scrollTo) {
+    grid.scrollTo({ left: target, behavior: reduceMotion ? "auto" : "smooth" });
+  } else {
+    grid.scrollLeft = target;
+  }
+  updateCarouselControls();
+}
+
+function moveCarousel(direction) {
+  if (!isGalleryPreview) return;
+  const left = grid.scrollLeft || 0;
+  const start = grid.getBoundingClientRect().left;
+  const positions = Array.from(grid.children, (card) => card.getBoundingClientRect().left - start + left);
+  const next = direction > 0
+    ? positions.find((position) => position > left + 4) ?? carouselLimit()
+    : positions.reverse().find((position) => position < left - 4) ?? 0;
+  scrollCarousel(next <= 4 ? 0 : next);
+}
+
 function renderWorks() {
   const matchingItems = visibleItems();
   const items = isGalleryPreview ? previewItems(matchingItems) : matchingItems;
@@ -1188,6 +1229,7 @@ function renderWorks() {
     loadMoreButton.textContent = state.loading ? "読み込み中…" : "もっとみる";
   }
   updateGalleryLinks();
+  updateCarouselControls();
   loadXEmbeds();
 }
 
@@ -1249,7 +1291,7 @@ function loadXEmbeds() {
       observer.unobserve(entry.target);
       renderXEmbed(entry.target);
     });
-  }, { rootMargin: "400px 0px" });
+  }, { rootMargin: isGalleryPreview ? "400px 240px" : "400px 0px" });
   shells.forEach((shell) => embedObserver.observe(shell));
 }
 
@@ -1337,6 +1379,21 @@ async function readConfig() {
   } catch {
     formStatus.textContent = "投稿受付の状態を確認できませんでした。時間をおいて再度お試しください。";
   }
+}
+
+carouselPrevious?.addEventListener("click", () => moveCarousel(-1));
+carouselNext?.addEventListener("click", () => moveCarousel(1));
+if (isGalleryPreview) {
+  grid.addEventListener("scroll", updateCarouselControls, { passive: true });
+  window.addEventListener?.("resize", updateCarouselControls);
+  grid.addEventListener("keydown", (event) => {
+    if (event.target !== grid) return;
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    if (event.key === "Home") scrollCarousel(0);
+    else if (event.key === "End") scrollCarousel(carouselLimit());
+    else moveCarousel(event.key === "ArrowRight" ? 1 : -1);
+  });
 }
 
 filters?.addEventListener("click", (event) => {
