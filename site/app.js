@@ -1,7 +1,6 @@
 const CATEGORY_ALL = "すべて";
 const grid = document.querySelector("#works-grid");
 const statusNode = document.querySelector("#gallery-status");
-const countNode = document.querySelector("#works-count");
 const searchInput = document.querySelector("#work-search");
 const filters = document.querySelector("#category-filters");
 const loadMoreButton = document.querySelector("#load-more");
@@ -1138,19 +1137,15 @@ function previewItems(items) {
 }
 
 function updateGalleryLinks() {
-  document.querySelectorAll("[data-works-total]").forEach((node) => {
-    node.textContent = state.totalCount.toLocaleString("ja-JP");
-  });
   const categoryLinks = document.querySelector("#category-links");
   if (!categoryLinks) return;
   categoryLinks.replaceChildren();
   galleryCategories.forEach((category) => {
-    const count = state.items.filter((item) => item.category === category).length;
-    if (!count) return;
+    if (!state.items.some((item) => item.category === category)) return;
     const link = document.createElement("a");
     link.className = "gallery-category-link";
     link.href = `/works/?category=${encodeURIComponent(category)}`;
-    link.textContent = `${category} ${count}件`;
+    link.textContent = category;
     categoryLinks.append(link);
   });
 }
@@ -1172,12 +1167,7 @@ function renderWorks() {
   cards.forEach((card) => grid.append(card));
   grid.setAttribute("aria-busy", "false");
 
-  const total = state.totalCount;
   const hasWorkSource = state.configured || CODE_ADDED_WORKS.length > 0;
-  countNode.textContent = hasWorkSource
-    ? (isGalleryPreview ? `全${total.toLocaleString("ja-JP")}件`
-      : state.query || state.category !== CATEGORY_ALL ? `${cards.length}件を表示` : `${total.toLocaleString("ja-JP")}件`)
-    : "準備中";
   if (cards.length === 0) {
     const noPublishedWorks = state.configured && state.items.length === 0 && state.offset === 0;
     statusNode.replaceChildren(emptyState(
@@ -1191,14 +1181,11 @@ function renderWorks() {
     ));
   } else {
     statusNode.replaceChildren();
-    statusNode.textContent = state.query || state.category !== CATEGORY_ALL
-      ? `${cards.length}件を表示しています。`
-      : "";
   }
   if (loadMoreButton) {
     loadMoreButton.hidden = state.offset >= state.cmsTotalCount || !state.configured;
     loadMoreButton.disabled = state.loading;
-    loadMoreButton.textContent = state.loading ? "読み込み中…" : "もっと見る";
+    loadMoreButton.textContent = state.loading ? "読み込み中…" : "もっとみる";
   }
   updateGalleryLinks();
   loadXEmbeds();
@@ -1298,7 +1285,6 @@ async function fetchPage(offset = 0) {
   } catch {
     state.loading = false;
     grid.setAttribute("aria-busy", "false");
-    countNode.textContent = state.totalCount ? `${state.totalCount}件` : "読み込み中";
     statusNode.textContent = state.items.length
       ? "ほかの作品を読み込めませんでした。時間をおいて再度お試しください。"
       : "作品を読み込めませんでした。時間をおいて再度お試しください。";
@@ -1306,7 +1292,7 @@ async function fetchPage(offset = 0) {
     state.loading = false;
     if (loadMoreButton) {
       loadMoreButton.disabled = false;
-      loadMoreButton.textContent = "もっと見る";
+      loadMoreButton.textContent = "もっとみる";
     }
   }
 }
