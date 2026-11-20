@@ -1,0 +1,98 @@
+name: Publish 524 fan site
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'functions/**'
+      - 'wrangler.jsonc'
+      - '.github/workflows/publish-pages.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: 524-pages-production
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == '5Ni4/524-open-character-project' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CLOUDFLARE_ACCOUNT_ID: c8bb8b1c8b24642505805c4e45c55e78
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - name: Check out the source revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+
+      - name: Validate the site
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check site/app.js
+          python3 - <<'PY'
+          import json, pathlib, re
+          config = json.loads(pathlib.Path('wrangler.jsonc').read_text())
+          assert config['name'] == '524-open-character-project'
+          assert config['pages_build_output_dir'] == './site'
+          source = pathlib.Path('site/app.js').read_text()
+          works = json.loads(re.search(r'const CODE_ADDED_WORKS = (\[.*?\n\]);', source, re.S).group(1))
+          ids = [re.fullmatch(r'https://x\.com/\w+/status/(\d+)', work['post_url']).group(1) for work in works]
+          assert ids and len(ids) == len(set(ids))
+          assert pathlib.Path('site/works/index.html').is_file()
+          assert pathlib.Path('functions/api/works.js').is_file()
+          print(f'Validated {len(works)} unique works and the gallery page.')
+          PY
+
+      - name: Publish to the existing Cloudflare Pages project
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$CLOUDFLARE_API_TOKEN" ]]; then
+            echo '::error::CLOUDFLARE_API_TOKEN is not configured. No deployment was attempted.'
+            echo 'Publication is pending: register CLOUDFLARE_API_TOKEN as a repository Actions secret, then rerun this job.' >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+          npx --yes wrangler@4.165.0 pages deploy site \
+            --project-name 524-open-character-project \
+            --branch main \
+            --commit-hash "$GITHUB_SHA"
+
+      - name: Verify the published files
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import { setTimeout } from 'node:timers/promises';
+          const origin = 'https://524-open-character-project.pages.dev';
+          const files = [['/', 'site/index.html'], ['/works/', 'site/works/index.html'], ['/app.js', 'site/app.js'], ['/styles.css', 'site/styles.css']];
+          let lastFailure;
+          for (let attempt = 0; attempt < 6; attempt++) {
+            try {
+              for (const [url, path] of files) {
+                const response = await fetch(`${origin}${url}?verify=${process.env.GITHUB_SHA}-${attempt}`, { signal: AbortSignal.timeout(15000) });
+                if (!response.ok || await response.text() !== fs.readFileSync(path, 'utf8')) throw new Error(`${url} has not updated to this revision.`);
+              }
+              fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `Published and verified the top page, gallery, JavaScript and CSS at ${origin}/works/\n`);
+              process.exit(0);
+            } catch (error) {
+              lastFailure = error;
+              if (attempt < 5) await setTimeout(10000);
+            }
+          }
+          throw lastFailure;
+          JS
