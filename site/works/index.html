@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff9ed" />
+    <meta name="description" content="イラスト・グッズ・物語など、みんなが作った524の作品をXの埋め込みで紹介。作者名や作品の種類から探せます。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="524のひみつ基地" />
+    <meta property="og:title" content="みんなの作品 | 524のひみつ基地" />
+    <meta property="og:description" content="イラスト・グッズ・物語など、みんなが作った524の作品をXの埋め込みで紹介。作者名や作品の種類から探せます。" />
+    <meta property="og:url" content="https://524-open-character-project.pages.dev/works/" />
+    <meta property="og:image" content="https://524-open-character-project.pages.dev/assets/og-524-dreams-left-space-no-frame.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1734" />
+    <meta property="og:image:height" content="907" />
+    <meta property="og:image:alt" content="左側に星の道と524、夢の小物を集め、右側に水色の余白をあけた横長のイラスト。" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="みんなの作品 | 524のひみつ基地" />
+    <meta name="twitter:description" content="イラスト・グッズ・物語など、みんなが作った524の作品をXの埋め込みで紹介。作者名や作品の種類から探せます。" />
+    <meta name="twitter:image" content="https://524-open-character-project.pages.dev/assets/og-524-dreams-left-space-no-frame.png" />
+    <meta name="twitter:image:alt" content="左側に星の道と524、夢の小物を集め、右側に水色の余白をあけた横長のイラスト。" />
+    <title>みんなの作品 | 524のひみつ基地</title>
+    <link rel="icon" type="image/png" href="/assets/favicon-524.png" />
+    <link rel="preconnect" href="https://platform.twitter.com" />
+    <link rel="stylesheet" href="/styles.css?v=gallery-20261120" />
+    <script src="/app.js?v=community-gallery-20261120" defer></script>
+  </head>
+  <body class="gallery-page">
+    <a class="skip-link" href="#works-grid">作品一覧へ</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="524のひみつ基地 トップ">
+        <img class="brand-icon" src="/assets/favicon-524.png" alt="" />
+        <span class="brand-name">524のひみつ基地</span>
+      </a>
+      <nav class="main-nav" aria-label="メインナビゲーション">
+        <a href="/">トップ</a>
+        <a href="/works/" aria-current="page">みんなの作品</a>
+        <a href="/#projects">Web作品</a>
+        <a class="nav-submit" href="/#submit">作品を送る</a>
+      </nav>
+    </header>
+    <main>
+      <section class="gallery-hero section-wrap" aria-labelledby="gallery-title">
+        <div>
+          <p class="section-kicker">524のギャラリー</p>
+          <h1 id="gallery-title">みんなの作品 <span class="gallery-total">全<span data-works-total>121</span>件</span></h1>
+          <p>あなたの知らない524が、きっといる。</p>
+          <p class="gallery-intro">イラスト、グッズ、物語、ゲーム。みんなが作った524を、作者のX投稿で紹介しています。</p>
+        </div>
+        <img src="/assets/favicon-524.png" width="104" height="104" alt="" />
+      </section>
+      <section class="works-section section-wrap" aria-label="作品を探す">
+        <div class="gallery-list-heading">
+          <h2>作品を探す</h2>
+          <span class="count-badge" id="works-count" aria-live="polite">全121件</span>
+        </div>
+        <div class="gallery-tools">
+          <div class="filter-list" id="category-filters" role="group" aria-label="作品の種類で絞り込む">
+            <button class="filter-chip is-active" type="button" data-category="すべて" aria-pressed="true">すべて</button>
+            <button class="filter-chip" type="button" data-category="イラスト・画像" aria-pressed="false">イラスト・画像</button>
+            <button class="filter-chip" type="button" data-category="設定・アイデア" aria-pressed="false">設定・アイデア</button>
+            <button class="filter-chip" type="button" data-category="グッズ" aria-pressed="false">グッズ</button>
+            <button class="filter-chip" type="button" data-category="写真・実物" aria-pressed="false">写真・実物</button>
+            <button class="filter-chip" type="button" data-category="その他" aria-pressed="false">その他</button>
+          </div>
+          <label class="search-box">
+            <span class="visually-hidden">作品や作者を検索</span>
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="work-search" type="search" placeholder="作品や作者を検索" autocomplete="off" />
+          </label>
+        </div>
+        <div class="gallery-status" id="gallery-status" role="status" aria-live="polite">作品を読み込んでいます。</div>
+        <div class="works-grid" id="works-grid" aria-busy="true"></div>
+        <button class="button button-secondary more-button" id="load-more" type="button" hidden>もっと見る</button>
+        <noscript><p>作品を見るには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
+      </section>
+      <div class="gallery-bottom section-wrap">
+        <a class="text-link" href="/">ひみつ基地のトップへ</a>
+        <a class="button button-primary" href="/#submit">自分の作品を紹介する</a>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <a class="footer-brand" href="/"><img class="brand-icon" src="/assets/favicon-524.png" alt="" /><span>524のひみつ基地</span></a>
+      <p>作品の権利は作者に帰属します。掲載や取り下げについては、<a href="https://x.com/R5ni4" target="_blank" rel="noopener noreferrer">R-524へご連絡ください</a>。</p>
+      <a class="footer-source" href="https://github.com/5Ni4/524-open-character-project" target="_blank" rel="noopener noreferrer">企画について</a>
+    </footer>
+  </body>
+</html>

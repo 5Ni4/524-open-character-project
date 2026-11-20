@@ -8,6 +8,9 @@ const loadMoreButton = document.querySelector("#load-more");
 const form = document.querySelector("#submission-form");
 const formStatus = document.querySelector("#form-status");
 const submitButton = document.querySelector("#submit-button");
+const isGalleryPreview = grid?.dataset.mode === "preview";
+const galleryCategories = ["イラスト・画像", "設定・アイデア", "グッズ", "写真・実物", "その他"];
+const initialParams = new URLSearchParams(window.location?.search || "");
 
 const CODE_ADDED_WORKS = [
   {
@@ -982,8 +985,9 @@ const CODE_ADDED_WORKS = [
 
 const state = {
   items: [...CODE_ADDED_WORKS],
-  category: CATEGORY_ALL,
-  query: "",
+  category: !isGalleryPreview && galleryCategories.includes(initialParams.get("category"))
+    ? initialParams.get("category") : CATEGORY_ALL,
+  query: isGalleryPreview ? "" : initialParams.get("q") || "",
   offset: 0,
   totalCount: CODE_ADDED_WORKS.length,
   cmsTotalCount: 0,
@@ -1122,8 +1126,47 @@ function visibleItems() {
   });
 }
 
+function previewItems(items) {
+  const selected = [];
+  for (const category of ["イラスト・画像", "グッズ", "設定・アイデア"]) {
+    const item = items.find((work) => work.category === category
+      && !selected.some((chosen) => chosen.creator_url === work.creator_url))
+      || items.find((work) => work.category === category);
+    if (item) selected.push(item);
+  }
+  return [...selected, ...items.filter((item) => !selected.includes(item))].slice(0, 3);
+}
+
+function updateGalleryLinks() {
+  document.querySelectorAll("[data-works-total]").forEach((node) => {
+    node.textContent = state.totalCount.toLocaleString("ja-JP");
+  });
+  const categoryLinks = document.querySelector("#category-links");
+  if (!categoryLinks) return;
+  categoryLinks.replaceChildren();
+  galleryCategories.forEach((category) => {
+    const count = state.items.filter((item) => item.category === category).length;
+    if (!count) return;
+    const link = document.createElement("a");
+    link.className = "gallery-category-link";
+    link.href = `/works/?category=${encodeURIComponent(category)}`;
+    link.textContent = `${category} ${count}件`;
+    categoryLinks.append(link);
+  });
+}
+
+function updateGalleryQuery() {
+  if (isGalleryPreview || !window.history?.replaceState) return;
+  const params = new URLSearchParams();
+  if (state.category !== CATEGORY_ALL) params.set("category", state.category);
+  if (state.query.trim()) params.set("q", state.query.trim());
+  const query = params.toString();
+  window.history.replaceState(null, "", `${window.location.pathname}${query ? `?${query}` : ""}`);
+}
+
 function renderWorks() {
-  const items = visibleItems();
+  const matchingItems = visibleItems();
+  const items = isGalleryPreview ? previewItems(matchingItems) : matchingItems;
   grid.replaceChildren();
   const cards = items.map(addWorkCard).filter(Boolean);
   cards.forEach((card) => grid.append(card));
@@ -1132,7 +1175,8 @@ function renderWorks() {
   const total = state.totalCount;
   const hasWorkSource = state.configured || CODE_ADDED_WORKS.length > 0;
   countNode.textContent = hasWorkSource
-    ? (state.query || state.category !== CATEGORY_ALL ? `${cards.length}件を表示` : `${total.toLocaleString("ja-JP")}件`)
+    ? (isGalleryPreview ? `全${total.toLocaleString("ja-JP")}件`
+      : state.query || state.category !== CATEGORY_ALL ? `${cards.length}件を表示` : `${total.toLocaleString("ja-JP")}件`)
     : "準備中";
   if (cards.length === 0) {
     const noPublishedWorks = state.configured && state.items.length === 0 && state.offset === 0;
@@ -1151,9 +1195,12 @@ function renderWorks() {
       ? `${cards.length}件を表示しています。`
       : "";
   }
-  loadMoreButton.hidden = state.offset >= state.cmsTotalCount || !state.configured;
-  loadMoreButton.disabled = state.loading;
-  loadMoreButton.textContent = state.loading ? "読み込み中…" : "もっと見る ↓";
+  if (loadMoreButton) {
+    loadMoreButton.hidden = state.offset >= state.cmsTotalCount || !state.configured;
+    loadMoreButton.disabled = state.loading;
+    loadMoreButton.textContent = state.loading ? "読み込み中…" : "もっと見る";
+  }
+  updateGalleryLinks();
   loadXEmbeds();
 }
 
@@ -1221,7 +1268,7 @@ function loadXEmbeds() {
 
 async function fetchPage(offset = 0) {
   state.loading = true;
-  loadMoreButton.disabled = true;
+  if (loadMoreButton) loadMoreButton.disabled = true;
   try {
     const response = await fetch(`/api/works?offset=${offset}`, { headers: { Accept: "application/json" } });
     if (!response.ok) throw new Error("読み込みに失敗しました。");
@@ -1244,7 +1291,7 @@ async function fetchPage(offset = 0) {
     state.totalCount = state.cmsTotalCount + CODE_ADDED_WORKS.length;
     if (keepExistingCards) {
       // Keep embeds already loading when no additional CMS source is configured.
-      loadMoreButton.hidden = true;
+      if (loadMoreButton) loadMoreButton.hidden = true;
     } else {
       renderWorks();
     }
@@ -1257,8 +1304,10 @@ async function fetchPage(offset = 0) {
       : "作品を読み込めませんでした。時間をおいて再度お試しください。";
   } finally {
     state.loading = false;
-    loadMoreButton.disabled = false;
-    loadMoreButton.textContent = "もっと見る ↓";
+    if (loadMoreButton) {
+      loadMoreButton.disabled = false;
+      loadMoreButton.textContent = "もっと見る";
+    }
   }
 }
 
@@ -1304,7 +1353,7 @@ async function readConfig() {
   }
 }
 
-filters.addEventListener("click", (event) => {
+filters?.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-category]");
   if (!button) return;
   state.category = button.dataset.category;
@@ -1313,15 +1362,17 @@ filters.addEventListener("click", (event) => {
     filter.classList.toggle("is-active", active);
     filter.setAttribute("aria-pressed", String(active));
   });
+  updateGalleryQuery();
   renderWorks();
 });
 
-searchInput.addEventListener("input", () => {
+searchInput?.addEventListener("input", () => {
   state.query = searchInput.value;
+  updateGalleryQuery();
   renderWorks();
 });
 
-loadMoreButton.addEventListener("click", () => {
+loadMoreButton?.addEventListener("click", () => {
   if (!state.loading && state.offset < state.cmsTotalCount) fetchPage(state.offset);
 });
 
@@ -1369,6 +1420,12 @@ form?.addEventListener("submit", async (event) => {
   }
 });
 
+if (searchInput) searchInput.value = state.query;
+filters?.querySelectorAll("button[data-category]").forEach((filter) => {
+  const active = filter.dataset.category === state.category;
+  filter.classList.toggle("is-active", active);
+  filter.setAttribute("aria-pressed", String(active));
+});
 if (form) readConfig();
 renderWorks();
 fetchPage();

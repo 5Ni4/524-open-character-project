@@ -23,8 +23,8 @@
     <title>524のひみつ基地</title>
     <link rel="icon" type="image/png" href="/assets/favicon-524.png" />
     <link rel="preconnect" href="https://platform.twitter.com" />
-    <link rel="stylesheet" href="/styles.css?v=x-embeds-20261120" />
-    <script src="/app.js?v=community-works-embeds-20261120" defer></script>
+    <link rel="stylesheet" href="/styles.css?v=gallery-20261120" />
+    <script src="/app.js?v=community-gallery-20261120" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#works">作品一覧へ</a>
@@ -34,7 +34,7 @@
         <span class="brand-name">524のひみつ基地</span>
       </a>
       <nav class="main-nav" aria-label="メインナビゲーション">
-        <a href="#works">作品を見る</a>
+        <a href="/works/">作品を見る</a>
         <a href="#hashtags">ハッシュタグ</a>
         <a href="#projects">Web作品</a>
         <a class="nav-submit" href="#submit">作品を送る <span aria-hidden="true">↗</span></a>
@@ -47,7 +47,7 @@
           <h1 id="hero-title">みんなで夢を<br /><span>広げよう。</span></h1>
           <p class="hero-intro">524は、原作者R-524が描いた原案から生まれた不思議生命体。姿や物語はいろんな解釈で楽しめます。イラストも、物語も、グッズも。ひとりひとりの「こうだったらいいな」から、524の世界が広がっていきます。</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#works">作品を見てみる <span aria-hidden="true">↓</span></a>
+            <a class="button button-primary" href="/works/">みんなの作品を見る</a>
             <a class="text-link" href="#submit">自分の作品を紹介する <span aria-hidden="true">↗</span></a>
           </div>
           <p class="hero-footnote">作品は作者のX投稿を埋め込んで紹介します。</p>
@@ -55,6 +55,24 @@
         </div>
         <div class="hero-art">
           <div class="art-frame"><img src="/assets/524-dreams.png" alt="星の道に囲まれた524。ロケット、雲の上の家、望遠鏡のある塔、本が描かれています。" /></div>
+        </div>
+      </section>
+
+      <section class="works-section works-preview section-wrap" id="works" aria-labelledby="works-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">みんなの創作が集まる場所</p>
+            <h2 id="works-title">みんなの作品</h2>
+            <p class="section-description">イラストも、グッズも、物語も。それぞれの「524」をのぞいてみよう。</p>
+          </div>
+          <a class="count-badge" id="works-count" href="/works/" aria-live="polite">全121件</a>
+        </div>
+        <div class="gallery-category-links" id="category-links" aria-label="作品の種類から探す"></div>
+        <div class="gallery-status" id="gallery-status" role="status" aria-live="polite"></div>
+        <div class="works-grid" id="works-grid" data-mode="preview" aria-busy="true"></div>
+        <div class="gallery-preview-footer">
+          <p>ここで紹介するのは、ほんの一部。お気に入りの524を探しに。</p>
+          <a class="button button-primary" href="/works/">全<span data-works-total>121</span>件の作品を見る</a>
         </div>
       </section>
 
@@ -310,36 +328,7 @@
         </ol>
       </section>
 
-      <section class="works-section section-wrap" id="works" aria-labelledby="works-title">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">作品をさがす</p>
-            <h2 id="works-title">みんなの作品</h2>
-            <p class="section-description">Xの投稿から、524のいろいろな姿を集めています。</p>
-          </div>
-          <span class="count-badge" id="works-count" aria-live="polite">読み込み中…</span>
-        </div>
 
-        <div class="gallery-tools">
-          <div class="filter-list" id="category-filters" role="group" aria-label="作品の種類で絞り込む">
-            <button class="filter-chip is-active" type="button" data-category="すべて" aria-pressed="true">すべて</button>
-            <button class="filter-chip" type="button" data-category="イラスト・画像" aria-pressed="false">イラスト・画像</button>
-            <button class="filter-chip" type="button" data-category="設定・アイデア" aria-pressed="false">設定・アイデア</button>
-            <button class="filter-chip" type="button" data-category="グッズ" aria-pressed="false">グッズ</button>
-            <button class="filter-chip" type="button" data-category="写真・実物" aria-pressed="false">写真・実物</button>
-            <button class="filter-chip" type="button" data-category="その他" aria-pressed="false">その他</button>
-          </div>
-          <label class="search-box">
-            <span class="visually-hidden">作品や作者を検索</span>
-            <span class="search-icon" aria-hidden="true">⌕</span>
-            <input id="work-search" type="search" placeholder="作品や作者を検索" autocomplete="off" />
-          </label>
-        </div>
-
-        <div class="gallery-status" id="gallery-status" role="status" aria-live="polite">作品を読み込んでいます。</div>
-        <div class="works-grid" id="works-grid" aria-busy="true"></div>
-        <button class="button button-secondary more-button" id="load-more" type="button" hidden>もっと見る <span aria-hidden="true">↓</span></button>
-      </section>
 
       <section class="hashtag-section section-wrap" id="hashtags" aria-labelledby="hashtags-title">
         <div class="section-heading hashtag-heading">
