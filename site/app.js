@@ -15,6 +15,14 @@ const initialParams = new URLSearchParams(window.location?.search || "");
 
 const CODE_ADDED_WORKS = [
   {
+    "title": "524ぱーりぃたいむ",
+    "post_url": "https://x.com/66nerumu/status/2124529043643281717",
+    "creator_name": "あさ",
+    "creator_url": "https://x.com/66nerumu",
+    "category": "イラスト・画像",
+    "comment": "#524ぱーりぃたいむ"
+  },
+  {
     "title": "524の3Dモデル画像（黄色・斜めアングル）",
     "post_url": "https://x.com/asahina_AIauto/status/2099976264325247317",
     "creator_name": "朝日南",
